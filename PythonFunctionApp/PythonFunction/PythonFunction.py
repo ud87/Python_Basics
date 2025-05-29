@@ -7,3 +7,8 @@ def add_one(number):
 
 print("add_one(4): ")
 print( add_one(4))
+
+def add_two(num):
+    return num + 2
+
+print(add_two(2))
