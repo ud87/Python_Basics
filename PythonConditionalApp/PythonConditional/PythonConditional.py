@@ -63,3 +63,109 @@ def a_and_b(a, b):
   # return a ?? b
   return a and b
 
+
+#while conditional 
+i = 0
+while i < 10:
+    print(i)
+    i = i + 1
+
+# The `while` loop is like an `if`, in that it takes an expression that
+# evaluates to True or False, and then executes its block of code if the
+# condition is True.
+
+# However, the `while` loop is different in that it keeps repeatedly executing
+# the block for as long as the condition is True.
+
+####################################################################
+#Excercise
+print("")
+print("Function: add_cats_repeatedly")
+
+# Write a function that adds the item "cats" to the given word_list, repeatedly,
+# a number of times defined by the given count parameter.
+# Example:
+#    add_cats_repeatedly([], 3)
+# => ['cats', 'cats', 'cats']
+
+def add_cats_repeatedly(word_list, count):
+  if (len(word_list) == 0):
+      while len(word_list) < count:
+        word_list.append("cats")
+  else:
+      while len(word_list) <= count:
+        word_list.append("cats")
+  return word_list
+
+print(add_cats_repeatedly([], 2))
+
+###################################################################w
+
+#for loop
+names = ["Harry", "Tom", "Sally"]
+
+for name in names:
+    print(f"Name: {name}")
+
+
+for number in range(0, 10):
+    print(f"Number: {number}")
+
+# Summarising is processing down a list to a single value. It is sometimes also
+# called 'reduce' — like reducing a broth to a thick soup.
+
+# Add up all the numbers in the list
+def add_up_numbers(numbers):
+  result = 0
+  for number in numbers:
+    result = result + number
+  return result
+
+# Mapping is going through a list and converting ('mapping') each item to
+# another item. This is useful when you want to perform the same operation
+# across a list of items.
+
+# Here's an example:
+
+words = ['I', 'need', 'another', 'five', 'years']
+
+first_letters = [] # This is our accumulator again
+
+for word in words: # We go through each word
+  first_letter = word[0] # Get the first letter
+  # And append it to our accumulator list:
+  first_letters.append(first_letter)
+
+print(words)
+print(first_letters)
+
+# Return a new list of each number with 100 added
+def add_one_hundred_to_numbers(numbers):
+  result = []
+  for number in numbers:
+    result.append(number + 100)
+  return result
+
+
+# Filtering is going through a list and keeping only some of the items,
+# typically according to a condition of some kind. This is useful when you only
+# want to keep some of the items in your list.
+
+# Imagine someone didn't put their age in
+raw_ages = [32, 40, None, 1, 32]
+
+clean_ages = [] # This is our accumulator again
+
+for age in raw_ages: # We go through each age
+  # We combine a for with an if to remove 'None' items
+  if age != None:
+    clean_ages.append(age)
+
+
+# Return a new list with only the positive numbers
+def only_positive_numbers(numbers):
+  result = []
+  for number in numbers:
+    if number >= 0:
+      result.append(number)
+  return result
